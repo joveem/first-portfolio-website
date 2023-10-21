@@ -1,0 +1,92 @@
+/* body {
+    background: #ECEFF1;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+} */
+
+.message-404 {
+    background: #fffc;
+    max-width: 360px;
+    margin: 100px auto 16px;
+    padding: 32px 24px 16px;
+    border-radius: 3px;
+}
+
+.message-404 h1 {
+    /* color: #ffa100; */
+    /* color: var(--main-text-color-01); */
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0 0 16px;
+}
+
+.message-404 h2 {
+    /* color: rgba(0, 0, 0, 0.6); */
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.message-404 h3 {
+    /* color: #888; */
+    font-weight: normal;
+    font-size: 16px;
+    margin: 16px 0 12px;
+}
+
+.message-404 p {
+    line-height: 140%;
+    margin: 16px 0 24px;
+    font-size: 14px;
+}
+
+/* .message-404 a {
+    display: block;
+    text-align: center;
+    background: #039be5;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+} */
+
+.message-404,
+.message-404 a {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#load {
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    body,
+    .message-404 {
+        margin-top: 0;
+        /* background: white; */
+        box-shadow: none;
+    }
+
+    /* body {
+        border-top: 16px solid #ffa100;
+    } */
+}
+
+
+.main-text-color-01 {
+    color: #111;
+}
+
+.main-text-color-02 {
+    color: #111;
+}
+
+.secondary-text-color-01 {
+    color: #6c757d;
+}

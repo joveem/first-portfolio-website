@@ -1,0 +1,33 @@
+/* default / base */
+
+html {
+    height: 100vh;
+    /* width: 100vh; */
+    margin: 0;
+    padding: 0;
+
+    /* min-height: 100vh;
+    max-height: 100vh; */
+    margin: 0 auto;
+}
+
+body {
+    /* height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; */
+
+    /* height: 100vh;
+    width: 100; */
+    margin: 0;
+    padding: 0;
+/* 
+    min-height: 100vh;
+    max-height: 100vh;
+    margin: 0 auto; */
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(#FFffFF 16%, #ABABAB 34%, #2E2E2E 66%, #2E2E2E 83%, #1A1A1A);
+    background-size: 400% 400%;
+}

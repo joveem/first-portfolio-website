@@ -1,0 +1,18 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(./../fonts/press-start-2p/PressStart2P.woff);
+}
+
+.main-name {
+    font-family: 'myFirstFont', sans-serif;
+}
+
+.shown {
+    opacity: 1;
+
+    max-width: 900px;
+}
+
+.hiden {
+    opacity: 0;
+}

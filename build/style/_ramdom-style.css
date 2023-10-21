@@ -1,0 +1,119 @@
+/* by-project */
+
+.animate {
+    -webkit-animation: myfirst 3s;
+    animation: myfirst 3s;
+}
+
+/* @keyframes myfirst {
+    0% {
+        background: white;
+    }
+
+    40% {
+        background: gray;
+    }
+
+    70% {
+        background: yellow;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+@-webkit-keyframes myfirst {
+    0% {
+        background: white;
+    }
+
+    40% {
+        background: gray;
+    }
+
+    70% {
+        background: yellow;
+    }
+
+    100% {
+        background: red;
+    }
+} */
+
+
+
+.div-3d-01 {
+    transform:
+        rotate3d(.5, -.866, 0, 15deg) rotate(1deg);
+    box-shadow:
+        2em 4em 6em -2em rgba(0, 0, 0, .5),
+        1em 2em 3.5em -2.5em rgba(0, 0, 0, .5);
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+    border-radius: .5em;
+}
+
+.div-3d-01:hover {
+    transform:
+        rotate3d(0, 0, 0, 0deg) rotate(0deg);
+}
+
+.div-iphone {
+    width: 100%;
+    aspect-ratio: 748 / 378;
+    /* height: 378px;
+    max-width: 748px; */
+
+    /* position: absolute; */
+    position: relative;
+    /* top: -200px; */
+
+
+    justify-content: center;
+    align-items: center;
+
+
+    display: flex;
+}
+
+.div-iphone video {
+    position: absolute;
+
+    width: 95.5%;
+}
+
+.div-iphone img {
+    position: absolute;
+
+    width: 100%;
+}
+
+.div-video-original video {
+    width: 95.5%;
+}
+
+.youtube-video-01 {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.youtube-video-02 {
+    width: 100%;
+    aspect-ratio: 2220 / 1080;
+}
+
+.youtube-video-container {
+    width: 100%;
+    background-color: #0004;
+}
+
+.youtube-video-container span {
+    display: inline-block;
+    height: 2rem;
+    width: 100%;
+    /* margin: 20px; */
+    /* padding: 20px; */
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+/* ############# */
+/* ##  DEBUG  ## */
+/* ############# */
+
+
+.debug-color-pink {
+    background-image: linear-gradient(#f0f1, #f0f2);
+}
+
+.debug-color-hard-pink {
+    background-image: linear-gradient(#f0f6, #f0fa);
+}
+
+.debug-color-red {
+    background-image: linear-gradient(#f111, #f112);
+}
+
+.debug-color-green {
+    background-image: linear-gradient(#1f11, #1f12);
+}
+
+.debug-color-hard-green {
+    background-image: linear-gradient(#1f16, #1f1a);
+}
+
+.debug-color-blue {
+    background-image: linear-gradient(#11f1, #11f2);
+}
+
+.debug-color-hard-blue {
+    background-image: linear-gradient(#11f6, #11fa);
+}
+
