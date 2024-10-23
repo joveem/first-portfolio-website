@@ -36,7 +36,7 @@
     --main-text-color-02: #222;
     --secondary-text-color-01: #6c757d;
     --link-color-01: #4f7ba1;
-    --home-background-url: url(https://jovdev-website-bucket-01.s3.amazonaws.com/public/images/home/background-out-of-order-01.jpg);
+    --home-background-url: url(https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/home/background-out-of-order-01.jpg);
 }
 
 .main-text-color-01 {

@@ -48,7 +48,7 @@
     cursor: pointer;
     opacity: 0.5;
 
-    background-image: url("https://jovdev-website-bucket-01.s3.amazonaws.com/public/images/about/light-switch-on.png");
+    background-image: url("https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-on.png");
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
