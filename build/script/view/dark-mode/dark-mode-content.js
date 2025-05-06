@@ -51,11 +51,11 @@ function ApplyDarkText()
 function ApplyLightHomeBackground()
 {
     let body = $("body").get(0);
-    body.style.setProperty("--home-background-url", "url(https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/home/background-out-of-order-01.jpg)")
+    body.style.setProperty("--home-background-url", "url(https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/home/background-out-of-order-01.jpg)")
 }
 
 function ApplyDarkHomeBackground()
 {
     let body = $("body").get(0);
-    body.style.setProperty("--home-background-url", "url(https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/home/background-out-of-order-02.jpg)")
+    body.style.setProperty("--home-background-url", "url(https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/home/background-out-of-order-02.jpg)")
 }

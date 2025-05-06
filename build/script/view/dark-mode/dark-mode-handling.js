@@ -111,23 +111,23 @@ function ApplyDarkThemeInstantaneously()
 
 function ApplyLightToMainImage()
 {
-    DoSmoothImageChange("https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png", 0.3);
+    DoSmoothImageChange("https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png", 0.3);
 }
 
 function ApplyDarkToMainImage()
 {
-    DoSmoothImageChange("https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-02-06.png", 0.3);
+    DoSmoothImageChange("https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-02-06.png", 0.3);
 }
 
 function ApplyLightToMainImageInstantaneously()
 {
-    SetImageInstantaneously("https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png", 0);
+    SetImageInstantaneously("https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png", 0);
 }
 
 
 function ApplyDarkToMainImageInstantaneously()
 {
-    SetImageInstantaneously("https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-02-06.png", 0);
+    SetImageInstantaneously("https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-02-06.png", 0);
 }
 
 function SetImageInstantaneously(imagePath)
@@ -168,17 +168,17 @@ function DoSmoothImageChange(imagePath, changeDuration)
 function ApplyLightLightSwitch()
 {
     // let lightSwitchImage = $(".light-switch");
-    // lightSwitchImage.attr("src", 'https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-on.png');
+    // lightSwitchImage.attr("src", 'https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-on.png');
     let lightSwitchImage = $('.div-light-switch');
-    lightSwitchImage.css('background-image', 'url(https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-on.png)');
+    lightSwitchImage.css('background-image', 'url(https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-on.png)');
 }
 
 function ApplyDarkLightSwitch()
 {
     // let lightSwitchImage = $(".light-switch");
-    // lightSwitchImage.attr("src", 'https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-off.png');
+    // lightSwitchImage.attr("src", 'https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-off.png');
     let lightSwitchImage = $('.div-light-switch');
-    lightSwitchImage.css('background-image', 'url(https://jovdev-ws-fe-01-cdn.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-off.png)');
+    lightSwitchImage.css('background-image', 'url(https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/light-switch-off.png)');
 }
 
 
