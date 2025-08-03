@@ -20,29 +20,37 @@ export function ApplyDarkTheme()
 function ApplyLightBackground()
 {
     let bodyElement = $('body');
-    bodyElement.addClass('header-nav-dark-to-light-animation');
+    // bodyElement.addClass('header-nav-dark-to-light-animation');
+    bodyElement.addClass('header-nav-light-to-dark-animation');
     bodyElement.one(
         'webkitAnimationEnd oanimationend msAnimationEnd animationend',
         function (e)
         {
-            bodyElement.removeClass('header-nav-dark-to-light-animation');
-            bodyElement.removeClass('nav-dark-dark');
+            // bodyElement.removeClass('header-nav-dark-to-light-animation');
+            bodyElement.removeClass('header-nav-light-to-dark-animation');
+            // bodyElement.removeClass('nav-dark-dark');
+            bodyElement.removeClass('header-nav-light');
 
-            bodyElement.addClass('header-nav-light');
+            // bodyElement.addClass('header-nav-light');
+            bodyElement.addClass('nav-dark-dark');
         });
 }
 
 function ApplyDarkBackground()
 {
     let bodyElement = $('body');
-    bodyElement.addClass('header-nav-light-to-dark-animation');
+    // bodyElement.addClass('header-nav-light-to-dark-animation');
+    bodyElement.addClass('header-nav-dark-to-light-animation');
     bodyElement.one(
         'webkitAnimationEnd oanimationend msAnimationEnd animationend',
         function (e)
         {
-            bodyElement.removeClass('header-nav-light-to-dark-animation');
-            bodyElement.removeClass('header-nav-light');
+            // bodyElement.removeClass('header-nav-light-to-dark-animation');
+            bodyElement.removeClass('header-nav-dark-to-light-animation');
+            // bodyElement.removeClass('header-nav-light');
+            bodyElement.removeClass('nav-dark-dark');
 
-            bodyElement.addClass('nav-dark-dark');
+            // bodyElement.addClass('nav-dark-dark');
+            bodyElement.addClass('header-nav-light');
         });
 }

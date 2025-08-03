@@ -61,6 +61,10 @@
         /* color: hotpink; */
 }
 
+.link-color-01 span {
+    text-decoration: underline;
+}
+
 .title-container {
     margin-top: 42px;
     margin-bottom: 62px;

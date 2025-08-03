@@ -28,6 +28,7 @@ body {
 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(#FFffFF 16%, #ABABAB 34%, #2E2E2E 66%, #2E2E2E 83%, #1A1A1A);
+    /* background-image: linear-gradient(#FFffFF 16%, #ABABAB 34%, #2E2E2E 66%, #2E2E2E 83%, #1A1A1A); */
+    background-image: linear-gradient(#FFffFF 0%, #FFffFF 30%, #1A1A1A 70%, #1A1A1A);
     background-size: 400% 400%;
 }

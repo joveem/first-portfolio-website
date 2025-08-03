@@ -1,5 +1,7 @@
 .header-nav {
-    background: linear-gradient(#D62626, #720000, #1A1A1A, #090909);
+    /* background: linear-gradient(#D62626, #720000, #1A1A1A, #090909); */
+    /* background: linear-gradient(#D62626, #D62626, #090909, #090909); */
+    background: linear-gradient(#090909, #090909, #D62626, #D62626);
     background-size: 300% 300%;
 }
 
@@ -73,56 +75,66 @@
 }
 
 .header-nav-light {
-    background-position: 0% 0%
-}
-
-.nav-dark-dark {
+    /* background-position: 0% 0% */
     background-position: 0% 100%
 }
 
+.nav-dark-dark {
+    /* background-position: 0% 100% */
+    background-position: 0% 0%
+}
+
 .header-nav-light-to-dark-animation {
-    -webkit-animation: header-nav-light-to-dark 0.5s;
-    animation: header-nav-light-to-dark 0.5s;
+    -webkit-animation: header-nav-light-to-dark 0.15s;
+    animation: header-nav-light-to-dark 0.15s;
 }
 
 .header-nav-dark-to-light-animation {
-    -webkit-animation: header-nav-dark-to-light 0.5s;
-    animation: header-nav-dark-to-light 0.5s;
+    -webkit-animation: header-nav-dark-to-light 0.15s;
+    animation: header-nav-dark-to-light 0.15s;
 }
 
 @keyframes header-nav-light-to-dark {
     0% {
-        background-position: 0% 0%
+        /* background-position: 0% 0% */
+        background-position: 0% 100%
     }
 
     20% {
+        /* background-position: 0% 50% */
         background-position: 0% 50%
     }
 
     40% {
-        background-position: 0% 75%
+        /* background-position: 0% 75% */
+        background-position: 0% 25%
     }
 
     100% {
-        background-position: 0% 100%
+        /* background-position: 0% 100% */
+        background-position: 0% 0%
     }
 }
 
 @keyframes header-nav-dark-to-light {
     0% {
-        background-position: 0% 100%
+        /* background-position: 0% 100% */
+        background-position: 0% 0%
     }
-
+    
     20% {
+        /* background-position: 0% 50% */
         background-position: 0% 50%
     }
-
+    
     40% {
-        background-position: 0% 25%
+        /* background-position: 0% 25% */
+        background-position: 0% 75%
     }
-
+    
     100% {
-        background-position: 0% 0%
+        /* background-position: 0% 0% */
+        background-position: 0% 100%
     }
 }
 

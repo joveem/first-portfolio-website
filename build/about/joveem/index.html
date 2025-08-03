@@ -13,14 +13,14 @@
     <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <!-- internal -->
-    <link rel="stylesheet" href="./../../style/_ramdom-style.css">
-    <link rel="stylesheet" href="./../../style/_debug.css">
-    <link rel="stylesheet" href="./../../style/main-generic.css">
-    <link rel="stylesheet" href="./../../style/main-body.css">
-    <link rel="stylesheet" href="./../../style/main-content.css">
-    <link rel="stylesheet" href="./../../style/main-header-nav.css">
-    <link rel="stylesheet" href="./../../style/page-about-content.css">
-    <!-- <link rel="stylesheet" href="/../../style/page-about-content.css"> -->
+    <link rel="stylesheet" href="/style/_ramdom-style.css">
+    <link rel="stylesheet" href="/style/_debug.css">
+    <link rel="stylesheet" href="/style/main-generic.css">
+    <link rel="stylesheet" href="/style/main-body.css">
+    <link rel="stylesheet" href="/style/main-content.css">
+    <link rel="stylesheet" href="/style/main-header-nav.css">
+    <link rel="stylesheet" href="/style/page-about-content.css">
+    <!-- <link rel="stylesheet" href="/style/page-about-content.css"> -->
     <!-- <link rel="stylesheet" href="/style/page-about-content.css"> -->
     <link href="https://fonts.cdnfonts.com/css/terminal" rel="stylesheet">
 
@@ -42,8 +42,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- internal -->
-    <script type="module" src="./../../script/main.js"></script>
-    <script type="module" src="./../../script/page-about.js"></script>
+    <script type="module" src="/script/main.js"></script>
+    <script type="module" src="/script/page-about.js"></script>
 
     <link rel="preload" as="image"
         href="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png">
@@ -62,7 +62,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark header-nav header-nav-light">
         <div class="container-fluid">
 
-            <a class="navbar-brand mx-auto header-home-icon-container" href="./../..">
+            <a class="navbar-brand mx-auto header-home-icon-container" href="/">
                 <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/logo/jovdev-logo-white-black.png"
                     class="logo-nav-size" alt="">
                 <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/logo/jovdev-logo-white-red.png"
@@ -72,16 +72,18 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./..">about</a>
-                    </li>
+                    <span class="nav-link main-text-color-01 disabled" style="padding-right: 0rem;"
+                        aria-current="page">/</span>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">/</a>
+                        <a class="nav-link" aria-current="page" href="/about">about</a>
                     </li>
 
+                    <a class="nav-link main-text-color-01 disabled" style="padding-left: 0rem; padding-right: 0rem;"
+                        aria-current="page">/</a>
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">joveem</a>
+                        <a class="nav-link main-text-color-01 active" aria-current="page" href="#">joveem</a>
                     </li>
 
                 </ul>
@@ -95,15 +97,19 @@
 
             <div class="scroll-step">
 
-                <h1 class="main-name main-joveem-name main-text-color-01">Cristovão Silva</h1>
-                <h2 class="main-text-color-02">Full Stack Software Engineer</h2>
+                <h1 class="main-name main-joveem-name main-text-color-01" style="letter-spacing: -0.2rem;">
+                    Cristovão Silva
+                </h1>
+                <h2 class="main-text-color-02" style="letter-spacing: -0.1rem;">
+                    Full Stack Software Engineer
+                </h2>
 
                 <div
                     class="div-bottol-horizontal-fill d-flex align-items-center flex-column joveem-image-container-parent">
                     <div class="image-container mx-auto joveem-image-container my-auto">
                         <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-05.png"
                             class="scroll-step-01-joveem-base" alt="">
-                        <!-- <img src="./../../images/about/about-joveem-translation-book-01.png" class="scroll-step-01-joveem-base" alt=""> -->
+                        <!-- <img src="/images/about/about-joveem-translation-book-01.png" class="scroll-step-01-joveem-base" alt=""> -->
                         <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-01-06.png"
                             class="scroll-step-01-joveem-base scroll-step-01-joveem-base-current-sprite" alt="">
                         <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/jovdev-website-joveem-02-06.png"
@@ -122,22 +128,75 @@
             <h2 class="text-center secondary-text-color-01">about me</h2>
 
 
-            <div class="row featurette">
+            <div class="row featurette main-text-color-02" style="padding-bottom: 8rem;">
                 <div class="col-md-7 mx-auto">
-                    <p class="lead main-text-color-02 text-center">
-                        Passionate about multiplayer games
-                        <br>
-                        Great Call of Duty player 😎
-                        <br>
-                        <span id="n-years-of-unity">N</span> years of Unity3D (C#)
-                        <br>
-                        <span id="n-years-of-realtime">N</span> years of real-time communication
-                        <br>
-                        <br>
-                        I value software quality, versioning quality and good development practices.
-                        <br>
-                        My product pillars are: maintainability and resilience
-                    </p>
+
+                    <div class="">
+
+                        <div class="lead text-center">
+                            Passionate about multiplayer games
+                            <br>
+                            Great Call of Duty player 😎
+                            <br>
+                            <span id="n-years-of-unity">N</span> years of Unity3D (C#)
+                            <br>
+                            <span id="n-years-of-realtime">N</span> years of real-time communication
+                            <br>
+                            <br>
+                            I value software quality, versioning quality and good development practices.
+                            <br>
+                            <br>
+                            <br>
+                            🏛️ My product pillars are:
+                        </div>
+
+                        <!-- <div class="text-center"> -->
+                        <div class="lead text-start">
+
+                            <br>
+
+                            <span class="fw-bold" style="opacity: 0.9;">
+                                💪 Resilience
+                            </span>
+                            <span class="fst-italic" style="opacity: 0.6;">
+                                (your users won't get a
+                                <span class="fw-bold">
+                                    "Welcome, userInfo.FirstName!"
+                                </span>
+                                or a
+                                <span class="fw-bold">
+                                    "Click here to get your NaN pieces of undefined!"
+                                </span>
+                                even when facing unexpected problems, and your software won't "freeze", "get stuck in an
+                                infinite loading" or anything that makes it look like a school project)
+                            </span>
+
+                            <br>
+                            <br>
+
+                            <span class="fw-bold" style="opacity: 0.9;">
+                                🔧 Maintainability
+                            </span>
+                            <span class="fst-italic" style="opacity: 0.6;">
+                                (your software will be easy to change/extend/debug and doing so will not create a
+                                snowball of unexpected problems -I'm serious)
+                            </span>
+
+                            <br>
+                            <br>
+
+                            <span class="fw-bold" style="opacity: 0.9;">
+                                🍃 UX
+                            </span>
+                            <span class="fst-italic" style="opacity: 0.6;">
+                                (the experience of using your software will be as good as it should be. if it had a
+                                shape, it would be a circle, If he had a board game manual, it would be like the Magic
+                                The Gathering one, and if it smelled, it would be like a Strawberry Shortcake toy)
+                            </span>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
@@ -209,10 +268,16 @@
                         <p>NodeJS</p>
                     </li>
                     <!-- ######################## -->
-                    <li class="software-skill-inline">
+                    <!-- <li class="software-skill-inline">
                         <img
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                         <p>JavaScript</p>
+                    </li> -->
+                    <!-- ######################## -->
+                    <li class="software-skill-inline">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                        <p>TypeScript</p>
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
@@ -246,15 +311,14 @@
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
-                        <img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
-                        <p>AngularJS</p>
+                        <i class="devicon-threejs-original"></i>
+                        <p>ThreeJS</p>
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
                         <img
-                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-                        <p>TypeScript</p>
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" />
+                        <p>AngularJS</p>
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
@@ -263,15 +327,15 @@
                         <p>Tailwind CSS</p>
                     </li>
                     <!-- ######################## -->
-                    <li class="software-skill-inline">
+                    <!-- <li class="software-skill-inline">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
                         <p>HTML</p>
-                    </li>
+                    </li> -->
                     <!-- ######################## -->
-                    <li class="software-skill-inline">
+                    <!-- <li class="software-skill-inline">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
                         <p>CSS</p>
-                    </li>
+                    </li> -->
                     <!-- ######################## -->
                 </ul>
             </div>
@@ -291,11 +355,6 @@
                         <img
                             src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/logo-photon-quantum-01.png" />
                         <p>Photon Quantum</p>
-                    </li>
-                    <!-- ######################## -->
-                    <li class="software-skill-inline">
-                        <i class="devicon-threejs-original"></i>
-                        <p>ThreeJS</p>
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
@@ -403,7 +462,7 @@
                     </li>
                     <!-- ######################## -->
                     <li class="software-skill-inline">
-                        <img src="./coreldraw-icon.svg" />
+                        <img src="/about/joveem/coreldraw-icon.svg" />
                         <p>Adobe CorelDraw</p>
                     </li>
                     <!-- ######################## -->
@@ -425,30 +484,45 @@
                 <div class="col-md-7 mx-auto">
 
                     <!-- Gunstars / title  -->
-                    <h2 class="featurette-heading main-text-color-01 clickable-content-01 about-details-link-gunstars">
-                        Gunstars Battle-Arena <span class="text-center secondary-text-color-01">(<i
-                                class="bi bi-android2 dark"></i>/<i class="bi bi-apple"></i>)</span></h2>
+                    <a href="/about/joveem/works/gunstars" class="text-decoration-none">
+                        <h2 class="featurette-heading main-text-color-01">
+                            Gunstars Battle-Arena
+                            <span class="text-center secondary-text-color-01">
+                                (<i class="bi bi-android2 dark"></i>/<i class="bi bi-apple"></i>)
+                            </span>
+                        </h2>
+                    </a>
+                    <p class="lead main-text-color-02">
+                        A popular strategy game about conquering territories and defeating opposing armies on the world
+                        map
+                    </p>
+
                     <p class="lead main-text-color-02">
                         A mobile deterministic multiplayer top-down shooter game
                     </p>
 
                     <!-- Gunstars / more details  -->
                     <span class="secondary-text-color-01">
-                        <a class="link-color-01" href="./works/gunstars">More details</a> (about my participation)
+                        <a class="link-color-01" href="/about/joveem/works/gunstars">More details</a> (about my
+                        participation)
                     </span>
                     <br>
 
                     <!-- Gunstars / links  -->
                     <span class="secondary-text-color-01">
                         Play in
-                        <a class="link-color-01"
+                        <a target="_blank" target="_blank" class="link-color-01 external-link text-decoration-none"
                             href="https://play.google.com/store/apps/details?id=com.Monomyto.GunStars&hl=pt_BR&gl=US">
-                            <i class="bi bi-android2 dark"></i> Google Play
+                            <i class="bi bi-android2 dark"></i>
+                            <span>Google Play</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
                         </a>
                         and
-                        <a class="link-color-01"
+                        <a target="_blank" class="link-color-01 external-link text-decoration-none"
                             href="https://apps.apple.com/br/app/gunstars-battle-royale/id1546759631">
-                            <i class="bi bi-apple"></i> App Store
+                            <i class="bi bi-apple"></i>
+                            <span>App Store</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
                         </a>
                     </span>
 
@@ -456,19 +530,20 @@
 
                 <!-- Gunstars / image  -->
                 <div class="col-md-5 mx-auto">
-                    <div class="react-reveal div-iphone mx-auto"
-                        style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-540199499702071-2;">
-                        <video loop="" autoplay="true" class="clickable-content-01  about-details-link-gunstars"
-                            muted="true">
-                            <source
-                                src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/videos/about/gunstars-gameplay-01.mp4"
-                                type="video/mp4">
-                        </video>
+                    <a href="/about/joveem/works/gunstars">
+                        <div class="react-reveal div-iphone mx-auto"
+                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-540199499702071-2;">
+                            <video loop="" autoplay="true" class="clickable-content-01" muted="true">
+                                <source
+                                    src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/videos/about/gunstars-gameplay-01.mp4"
+                                    type="video/mp4">
+                            </video>
 
-                        <img class="clickable-content-01 about-details-link-gunstars"
-                            src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/work/gunstars/android-frame-01.png"
-                            alt="">
-                    </div>
+                            <img class="clickable-content-01"
+                                src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/work/gunstars/android-frame-01.png"
+                                alt="">
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -483,18 +558,20 @@
 
 
                     <!-- War / title  -->
-                    <h2 class="featurette-heading main-text-color-01 clickable-content-01 about-details-link-war">War by
-                        Grow Games
-                        <span class="text-center secondary-text-color-01">
-                            (
-                            <i class="bi bi-browser-chrome"></i>
-                            /
-                            <i class="bi bi-android2 dark"></i>
-                            /
-                            <i class="bi bi-apple"></i>
-                            )
-                        </span>
-                    </h2>
+                    <a href="/about/joveem/works/war" class="text-decoration-none">
+                        <h2 class="featurette-heading main-text-color-01">
+                            War by Grow Games
+                            <span class="text-center secondary-text-color-01">
+                                (
+                                <i class="bi bi-browser-chrome"></i>
+                                /
+                                <i class="bi bi-android2 dark"></i>
+                                /
+                                <i class="bi bi-apple"></i>
+                                )
+                            </span>
+                        </h2>
+                    </a>
                     <p class="lead main-text-color-02">
                         A popular strategy game about conquering territories and defeating opposing armies on the world
                         map
@@ -502,7 +579,8 @@
 
                     <!-- War / more details  -->
                     <span class="secondary-text-color-01">
-                        <a class="link-color-01" href="./works/war">More details</a> (about my participation)
+                        <a class="link-color-01" href="/about/joveem/works/war">More details</a>
+                        (about my participation)
                     </span>
                     <!-- <p>Este é um <s>texto riscado</s> no HTML usando a tag &lt;s&gt;.</p>
                     <br>
@@ -514,14 +592,23 @@
                     <!-- War / links  -->
                     <p class="secondary-text-color-01">
                         Play in
-                        <a class="link-color-01" href="https://growgames.com.br/">
-                            <i class="bi bi-browser-chrome"></i> Web</a>,
-                        <a class="link-color-01"
+                        <a target="_blank" class="link-color-01 external-link text-decoration-none"
+                            href="https://growgames.com.br/">
+                            <i class="bi bi-browser-chrome"></i>
+                            <span>Web</span>
+                            <i class="bi bi-box-arrow-up-right"></i></a>,
+                        <a target="_blank" class="link-color-01 external-link text-decoration-none"
                             href="https://play.google.com/store/apps/details?id=br.com.grow.war&hl=pt_BR&gl=US">
-                            <i class="bi bi-android2 dark"></i> Google Play</a>
+                            <i class="bi bi-android2 dark"></i>
+                            <span>Google Play</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                         and
-                        <a class="link-color-01" href="https://apps.apple.com/br/app/war/id1026149171">
-                            <i class="bi bi-apple"></i>App Store
+                        <a target="_blank" class="link-color-01 external-link text-decoration-none"
+                            href="https://apps.apple.com/br/app/war/id1026149171">
+                            <i class="bi bi-apple"></i>
+                            <span>App Store</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
                         </a>
                     </p>
 
@@ -529,14 +616,17 @@
 
                 <!-- War / image  -->
                 <div class="col-md-5 mx-auto">
-                    <div class="react-reveal div-iphone mx-auto"
-                        style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-540199499702071-2;">
-                        <video loop="" autoplay="true" class="clickable-content-01 about-details-link-war" muted="true">
-                            <source
-                                src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/videos/about/war-gaules-clip-01.mp4"
-                                type="video/mp4">
-                        </video>
-                    </div>
+                    <a class="link-color-01" href="/about/joveem/works/war">
+                        <div class="react-reveal div-iphone mx-auto"
+                            style="animation-fill-mode: both; animation-duration: 1000ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1; animation-name: react-reveal-540199499702071-2;">
+                            <video loop="" autoplay="true" class="clickable-content-01 about-details-link-war"
+                                muted="true">
+                                <source
+                                    src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/videos/about/war-gaules-clip-01.mp4"
+                                    type="video/mp4">
+                            </video>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -548,9 +638,13 @@
                 <div class="col-md-7 mx-auto">
 
                     <!-- Laranjo / image  -->
-                    <h2 class="featurette-heading main-text-color-01 clickable-content-01 about-details-link-laranjo">
-                        Laranjo Virtual Pet <span class="text-center secondary-text-color-01">(<i
-                                class="bi bi-mortarboard"></i>/<i class="bi bi-github"></i>)</i></span></h2>
+                    <a target="_blank" class="text-decoration-none"
+                        href="https://github.com/joveem/pet-virtual-laranjo/#meu-laranjo">
+                        <h2
+                            class="featurette-heading main-text-color-01 clickable-content-01 about-details-link-laranjo">
+                            Laranjo Virtual Pet <span class="text-center secondary-text-color-01">(<i
+                                    class="bi bi-mortarboard"></i>/<i class="bi bi-github"></i>)</i></span></h2>
+                    </a>
                     <p class="lead main-text-color-02">
                         A game project to be used as a course completion work in the technical
                         course on Systems Development.<br> It turns Laranjo's meme into a virtual
@@ -569,8 +663,11 @@
                     <!-- Laranjo / links  -->
                     <p class="secondary-text-color-01">
                         More details in
-                        <a href="https://github.com/joveem/pet-virtual-laranjo/">
-                            <i class="bi bi-github"></i> GitHub
+                        <a class="link-color-01 text-decoration-none"
+                            href="https://github.com/joveem/pet-virtual-laranjo/">
+                            <i class="bi bi-github"></i>
+                            <span>GitHub</span>
+                            <i class="bi bi-box-arrow-up-right"></i>
                         </a>
                     </p>
 
@@ -578,9 +675,12 @@
 
                 <!-- Laranjo / image  -->
                 <div class="col-md-5 mx-auto">
-                    <img class="img-fluid mx-auto clickable-content-01 about-details-link-laranjo"
-                        src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/scr_pt_ini.jpg"
-                        alt="">
+                    <a target="_blank" class="text-decoration-none"
+                        href="https://github.com/joveem/pet-virtual-laranjo/#meu-laranjo">
+                        <img class="img-fluid mx-auto clickable-content-01 about-details-link-laranjo"
+                            src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/about/scr_pt_ini.jpg"
+                            alt="">
+                    </a>
                 </div>
 
             </div>
@@ -596,14 +696,34 @@
                         <br>
 
                         <div class="mx-auto d-flex align-items-center flex-column">
-                            <div>
-                                <span class="main-text-color-02">
+                            <div class="
+                                display: flex;
+                                flex-direction: row;
+                                align-content: center;
+                                align-items: center;
+                                gap: 0.4rem;
+                                ">
+
+                                <span class="main-text-color-02" style="display: inline;">
                                     DM on
                                 </span>
-                                <button type="button" class="btn btn-primary"
-                                    onclick="window.open('https://www.linkedin.com/in/cristov%C3%A3o-silva-245569173/','_blank')">
-                                    <i class="bi bi-linkedin"></i> LinkedIn
-                                </button>
+
+                                <a target="_blank" href="https://www.linkedin.com/in/joveem" style="display: inline;">
+                                    <button type="button" class="btn btn-primary">
+
+                                        <div style="
+                                            display: flex;
+                                            flex-direction: row;
+                                            align-content: center;
+                                            align-items: center;
+                                            gap: 0.4rem;
+                                            ">
+                                            <i class="bi bi-linkedin"></i>
+                                            LinkedIn
+                                            <i class="bi bi-box-arrow-up-right" style="font-size: 0.8rem;"></i>
+                                        </div>
+                                    </button>
+                                </a>
                             </div>
                         </div>
 
