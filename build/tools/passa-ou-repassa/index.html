@@ -111,7 +111,7 @@
       const loseBtn = team === 'blue' ? redBtn : blueBtn;
 
       // Destaque vencedor
-      winBtn.classList.add('ring-8', 'ring-white/80', 'scale-[1.02]');
+      winBtn.classList.add('ring-8', 'ring-white/80', 'ring-inset', 'scale-[1]')
 
       // Perdedor fica transparente e sem clique
       loseBtn.classList.add('opacity-25', 'pointer-events-none');
@@ -143,7 +143,7 @@
           playTone(740); // tom do azul
         } else
         {
-          playTone(523.25); // tom do vermelho (C5)
+          playTone(1000); // tom do vermelho (C5)
         }
         markWinner(team);
       } else
