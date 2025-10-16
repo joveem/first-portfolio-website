@@ -23,15 +23,15 @@
 </head>
 
 <body class="bg-neutral-900 text-white no-select">
-  <main
-    class="min-h-dvh flex flex-col items-stretch justify-center gap-4 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-    <header class="text-center mb-1">
-      <h1 class="text-xl font-semibold tracking-wide text-neutral-200">Passa ou Repassa — Buzzer</h1>
-      <p class="text-neutral-400 text-sm">Toque no seu time. O primeiro trava a rodada. 🔒</p>
-    </header>
+  <main class="relative min-h-dvh flex flex-col items-stretch p-0">
 
     <!-- Botões principais empilhados (retrato) -->
-    <section class="flex flex-col gap-4">
+    <a href="https://jovdev.com" target="_blank" rel="noopener noreferrer" class="absolute top-3 right-3 z-50">
+      <img src="https://jovdev-ws-fe-01-cdn-01.s3.sa-east-1.amazonaws.com/public/images/logo/jovdev-logo-white-red.png"
+        alt="JovDev" class="h-8 w-auto object-contain select-none pointer-events-auto" />
+    </a>
+
+    <section class="flex flex-col flex-1 min-h-dvh gap-0">
       <button id="blueBtn"
         class="flex-1 rounded-2xl bg-blue-600 active:scale-[0.98] shadow-lg shadow-blue-900/50 ring-0 transition-all duration-150 ease-out touch-manipulation py-10 sm:py-12 px-4">
         <div class="flex items-center justify-center gap-3 select-none">
@@ -49,17 +49,15 @@
       </button>
     </section>
 
-    <div class="flex items-center justify-center">
-      <button id="resetBtn"
-        class="rounded-xl bg-neutral-700 hover:bg-neutral-600 active:scale-[0.98] transition-all duration-150 touch-manipulation px-6 py-3 text-lg font-semibold flex items-center gap-2">
-        <span class="text-2xl leading-none">↩️</span>
-        <span>Reset</span>
-      </button>
-    </div>
+    <button id="resetBtn"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 rounded-xl bg-neutral-700/80 hover:bg-neutral-600 active:scale-[0.98] transition-all duration-150 touch-manipulation px-6 py-3 text-lg font-semibold flex items-center gap-2 backdrop-blur-sm">
+      <span class="text-2xl leading-none">↩️</span>
+      <span>Reset</span>
+    </button>
 
-    <footer class="text-center text-xs text-neutral-500 mt-1 select-none">
-      <span>Dica: ative som do celular 🔊 • vibração no toque se disponível 📳</span>
-    </footer>
+    <div class="absolute inset-x-0 bottom-3 z-40 text-center text-xs text-neutral-200 select-none">
+      Dica: ative som do celular 🔊 • vibração no toque se disponível 📳
+    </div>
   </main>
 
   <script>
