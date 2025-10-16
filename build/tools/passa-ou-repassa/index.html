@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Passa ou Repassa — Buzzer</title>
+  <!-- Tailwind CDN (único recurso externo). Se quiser 100% offline, troque por CSS inline. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#111827" />
+  <style>
+    /* Ajuste de tap highlight e seleção para UX mobile */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .no-select {
+      user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+</head>
+
+<body class="bg-neutral-900 text-white no-select">
+  <main
+    class="min-h-dvh flex flex-col items-stretch justify-center gap-4 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+    <header class="text-center mb-1">
+      <h1 class="text-xl font-semibold tracking-wide text-neutral-200">Passa ou Repassa — Buzzer</h1>
+      <p class="text-neutral-400 text-sm">Toque no seu time. O primeiro trava a rodada. 🔒</p>
+    </header>
+
+    <!-- Botões principais empilhados (retrato) -->
+    <section class="flex flex-col gap-4">
+      <button id="blueBtn"
+        class="flex-1 rounded-2xl bg-blue-600 active:scale-[0.98] shadow-lg shadow-blue-900/50 ring-0 transition-all duration-150 ease-out touch-manipulation py-10 sm:py-12 px-4">
+        <div class="flex items-center justify-center gap-3 select-none">
+          <span class="text-6xl leading-none">🔵</span>
+          <span class="text-2xl font-bold uppercase tracking-wide">Time Azul</span>
+        </div>
+      </button>
+
+      <button id="redBtn"
+        class="flex-1 rounded-2xl bg-red-600 active:scale-[0.98] shadow-lg shadow-red-900/50 ring-0 transition-all duration-150 ease-out touch-manipulation py-10 sm:py-12 px-4">
+        <div class="flex items-center justify-center gap-3 select-none">
+          <span class="text-6xl leading-none">🔴</span>
+          <span class="text-2xl font-bold uppercase tracking-wide">Time Vermelho</span>
+        </div>
+      </button>
+    </section>
+
+    <div class="flex items-center justify-center">
+      <button id="resetBtn"
+        class="rounded-xl bg-neutral-700 hover:bg-neutral-600 active:scale-[0.98] transition-all duration-150 touch-manipulation px-6 py-3 text-lg font-semibold flex items-center gap-2">
+        <span class="text-2xl leading-none">↩️</span>
+        <span>Reset</span>
+      </button>
+    </div>
+
+    <footer class="text-center text-xs text-neutral-500 mt-1 select-none">
+      <span>Dica: ative som do celular 🔊 • vibração no toque se disponível 📳</span>
+    </footer>
+  </main>
+
+  <script>
+    // === Audio (sem arquivos externos) ===
+    let audioCtx = null;
+    function ensureAudioContext()
+    {
+      if (!audioCtx)
+      {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new Ctx();
+      }
+    }
+
+    function playTone(freq = 660, duration = 0.35)
+    {
+      ensureAudioContext();
+      const now = audioCtx.currentTime;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+
+      // Envelope para evitar "click": fade-in curto + release exponencial
+      gain.gain.setValueAtTime(0.0001, now);
+      gain.gain.linearRampToValueAtTime(0.5, now + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+      osc.connect(gain).connect(audioCtx.destination);
+      osc.start(now);
+      osc.stop(now + duration + 0.05);
+    }
+
+    // === Estado de rodada ===
+    const blueBtn = document.getElementById('blueBtn');
+    const redBtn = document.getElementById('redBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    let winner = null; // 'blue' | 'red' | null
+
+    function vibrate(pattern)
+    {
+      if (navigator.vibrate) navigator.vibrate(pattern);
+    }
+
+    function markWinner(team)
+    {
+      const winBtn = team === 'blue' ? blueBtn : redBtn;
+      const loseBtn = team === 'blue' ? redBtn : blueBtn;
+
+      // Destaque vencedor
+      winBtn.classList.add('ring-8', 'ring-white/80', 'scale-[1.02]');
+
+      // Perdedor fica transparente e sem clique
+      loseBtn.classList.add('opacity-25', 'pointer-events-none');
+
+      // Taptic/haptic opcional
+      vibrate([20, 60, 20]);
+    }
+
+    function resetRound()
+    {
+      winner = null;
+      [blueBtn, redBtn].forEach(btn =>
+      {
+        btn.classList.remove('opacity-25', 'pointer-events-none', 'ring-8', 'ring-white/80', 'scale-[1.02]');
+      });
+      vibrate(15);
+    }
+
+    function handlePress(team)
+    {
+      // Se já há vencedor, só permite replay do próprio time (o outro continua bloqueado)
+      if (winner && winner !== team) return; // outro botão está travado
+
+      if (!winner)
+      {
+        winner = team; // trava a rodada ao primeiro toque
+        if (team === 'blue')
+        {
+          playTone(740); // tom do azul
+        } else
+        {
+          playTone(523.25); // tom do vermelho (C5)
+        }
+        markWinner(team);
+      } else
+      {
+        // Repetir som do vencedor opcionalmente
+        if (team === 'blue') playTone(740); else playTone(523.25);
+      }
+    }
+
+    // Eventos (usar pointer para cobrir toque/mouse/caneta)
+    blueBtn.addEventListener('pointerdown', () => handlePress('blue'));
+    redBtn.addEventListener('pointerdown', () => handlePress('red'));
+    resetBtn.addEventListener('click', resetRound);
+
+    // Desbloquear contexto de áudio no primeiro gesto em qualquer lugar
+    window.addEventListener('pointerdown', ensureAudioContext, { once: true });
+
+    // Prevenção de zoom por duplo toque em iOS
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', (e) =>
+    {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300)
+      {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, { passive: false });
+  </script>
+</body>
+
+</html>
