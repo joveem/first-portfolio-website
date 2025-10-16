@@ -56,7 +56,7 @@
       <span>Reset</span>
     </button>
 
-    <div class="absolute inset-x-0 bottom-3 z-40 text-center text-xs text-neutral-200 select-none">
+    <div class="absolute inset-x-0 top-3 z-40 text-center text-xs text-neutral-200 select-none">
       Dica: ative som do celular 🔊 • vibração no toque se disponível 📳
     </div>
   </main>
@@ -73,7 +73,7 @@
       }
     }
 
-    function playTone(freq = 660, duration = 2.0)
+    function playTone(freq = 660, duration = 0.5)
     {
       ensureAudioContext();
       const now = audioCtx.currentTime;
@@ -117,7 +117,7 @@
       loseBtn.classList.add('opacity-25', 'pointer-events-none');
 
       // Taptic/haptic opcional
-      vibrate([20, 60, 20]);
+      vibrate([220, 80, 120]);
     }
 
     function resetRound()
@@ -127,7 +127,7 @@
       {
         btn.classList.remove('opacity-25', 'pointer-events-none', 'ring-8', 'ring-white/80', 'scale-[1.02]');
       });
-      vibrate(15);
+      vibrate(150);
     }
 
     function handlePress(team)
